@@ -29,7 +29,7 @@ const userRoutes = require("./routes/users.js");
 const User = require("./models/user.js");
 
 // const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp'; //process.env.DB_URL; use this when we deploy
-const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 
 // Connect Mongoose
 const mongoose = require('mongoose');
@@ -130,6 +130,7 @@ app.use(helmet.contentSecurityPolicy(
                 "blob:",
                 "data:",
                 `https://res.cloudinary.com/dz7w4xpwj/`,
+                "https://res.cloudinary.com/douqbebwk/",
                 "https://images.unsplash.com",
                 "https://api.maptiler.com/"
             ],
