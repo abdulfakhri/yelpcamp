@@ -129,8 +129,7 @@ app.use(helmet.contentSecurityPolicy(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/douqbebwk/",
-                // `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}`, //SHOULD MATCH YOUR CLOUDINARY ACCOUNT!
+                `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}`,
                 "https://images.unsplash.com",
                 "https://api.maptiler.com/"
             ],
