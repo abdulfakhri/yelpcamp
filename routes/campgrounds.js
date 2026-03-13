@@ -28,6 +28,7 @@ router.route('/:id')
     .put(
         isLoggedIn,
         isAuthor,
+        upload.array('image'),
         validateCampground,
         campgrounds.updateCampground)
     .delete(
