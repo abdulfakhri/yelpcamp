@@ -15,7 +15,8 @@ const {isLoggedIn, isAuthor, validateCampground} = require("../middleware.js");
 router.route('/')
     .get(campgrounds.index)
     .post(
-        isLoggedIn, upload.array('image'),
+        isLoggedIn,
+        upload.array('image'),
         validateCampground,
         campgrounds.createCampground);
 
