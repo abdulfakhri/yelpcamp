@@ -28,7 +28,8 @@ const reviewRoutes = require("./routes/reviews.js");
 const userRoutes = require("./routes/users.js");
 const User = require("./models/user.js");
 
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp'; //process.env.DB_URL; use this when we deploy
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp'; //process.env.DB_URL; use this when we deploy
+const dbUrl = process.env.DB_URL;
 
 // Connect Mongoose
 const mongoose = require('mongoose');
